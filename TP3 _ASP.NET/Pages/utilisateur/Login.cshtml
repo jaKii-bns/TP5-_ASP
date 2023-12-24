@@ -1,0 +1,70 @@
+﻿@page
+@model TP3__ASP.NET.Pages.utilisateur.LoginModel
+@{
+    ViewData["Title"] = "Authentification";
+}
+<br />
+<h2 class="text-center">Authentification</h2>
+<hr />
+
+@if (Model.msgError != "")
+{
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <small>@Model.msgError</small>
+
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-
+                label="Close"></button>
+
+    </div>
+}
+
+@if (HttpContext.Session.GetString("userNotExist") != null)
+{
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <small>@HttpContext.Session.GetString("userNotExist")</small>
+
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-
+                label="Close"> </button>
+    </div>
+}
+
+@if (HttpContext.Session.GetString("userPwError") != null)
+{
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <small>@HttpContext.Session.GetString("userPwError")</small>
+
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-
+                label="Close"> </button>
+    </div>
+}
+
+@if (HttpContext.Session.GetString("userNotAdded") != null)
+{
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <small>@HttpContext.Session.GetString("userNotAdded") </small>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria- label="Close"> </button>
+    </div>
+}
+<form method="post" class="border rounded p-4">
+    <div class="form-outline mb-4">
+        <label class="form-label" for="email">Adresse electronique</label>
+        <input class="form-control" type="email" id="email" name="email" value="@Model.utilisateurData.userLogin" />
+    </div>
+    <div class="form-outline">
+        <label class="form-label" for="pw">Mot de passe</label>
+        <input class="form-control" type="password" id="pw" name="pw" />
+    </div>
+    <div class="row mb-4">
+    <div class="col">
+        <a href="#!">Mot de passe oublié?</a>
+    </div>
+    </div>
+    <div class="form-row text-center">
+        <input class="col-md-10 btn btn-primary btn-block m-1" type="submit" value="Se connecter" />
+    </div>
+    <div class="text-center">
+        <p>
+            Créer un compte? <a asp-area="" asp-page="/utilisateur/Register">S'inscrire</a>
+        </p>
+    </div>
+</form>

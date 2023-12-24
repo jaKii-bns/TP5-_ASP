@@ -1,0 +1,54 @@
+﻿@page
+@model TP3__ASP.NET.Pages.demandeModel
+@{
+}
+
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col">
+            <h2>Liste des Produits</h2>
+            <a class="btn btn-success btn-sm" asp-page="/Couvreplancher/create">Créer une nouvelle couvre plancher</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Type</th>
+                            <th>Mat_couvre</th>
+                            <th>Main_couvre</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var product in Model.ListCouvrePlancher)
+                        {
+                            <tr>
+                                <td>@product.id</td>
+                                <td>@product.Type</td>
+                                <td>@product.Materiaux</td>
+                                <td>@product.MainOeuvre</td>
+                                <td>
+                                    <a class="btn btn-success btn-sm" asp-page="/Couvreplancher/edit" asp-route-id="@product.id">Modifier</a>
+                                    <a class="btn btn-danger btn-sm" asp-page="/Couvreplancher/Delete" asp-route-id="@product.id" onclick="return confirm('Êtes-vous sûr de vouloir supprimer ce produit ?')">Supprimer</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy7W8qVbT+6QQWOc71I2eaOqCgg5eT5n6Z"
+        crossorigin="anonymous"></script>

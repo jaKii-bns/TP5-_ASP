@@ -1,0 +1,86 @@
+﻿@page
+@model AboutModel
+@{
+    ViewData["Title"] = "À propos de Plancher Expert";
+}
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .about-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            margin-top: 20px;
+        }
+
+        .developer-info {
+            margin-top: 30px;
+        }
+
+        .mission-products,
+        .team-contact {
+            margin-top: 50px;
+        }
+    </style>
+    <title>@ViewData["Title"]</title>
+</head>
+<body>
+
+    <div class="container about-container">
+        <div class="text-center">
+            <h1 class="display-4">À propos de Plancher Expert</h1>
+            <p class="lead">Bienvenue sur le site de Plancher Expert, votre expert en revêtements de sol de qualité.</p>
+        </div>
+
+        
+        <div class="row developer-info">
+            <div class="col-md-12">
+                <h2>Le Développeur du Site - Yahya El Haouta</h2>
+                <p>Je suis Yahya El Haouta, étudiant en informatique en 4e année à l'École Marocaine des Sciences de l'Ingénieur (EMSI). Passionné par le développement web, j'ai eu le privilège de contribuer à la création de ce site en tant que développeur principal. Mon objectif était de garantir une expérience utilisateur exceptionnelle tout en mettant en valeur les services de Plancher Expert.</p>
+            </div>
+        </div>
+
+        <div class="row mission-products">
+            <div class="col-md-6">
+                <h2>Notre Mission</h2>
+                <p>Nous nous engageons à fournir les meilleurs produits de revêtement de sol, accompagnés d'un service exceptionnel, pour répondre à vos besoins en matière de décoration intérieure.</p>
+            </div>
+            <div class="col-md-6">
+                <h2>Nos Produits</h2>
+                <p>Plancher Expert propose une large gamme de revêtements de sol, allant des tapis de qualité aux planchers de bois franc, en passant par les carreaux de céramique. Chaque produit est soigneusement sélectionné pour garantir la satisfaction de nos clients.</p>
+            </div>
+        </div>
+
+        <div class="row team-contact">
+            <div class="col-md-6">
+                <h2>Notre Équipe</h2>
+                <p>Notre équipe d'experts est dédiée à vous offrir des conseils personnalisés et un service professionnel. Nous sommes là pour vous guider dans le choix du revêtement de sol parfait pour votre espace.</p>
+            </div>
+            <div class="col-md-6">
+                <h2>Contactez-Nous</h2>
+                <p>N'hésitez pas à nous contacter pour toute question ou demande d'information. Nous sommes là pour vous aider dans tous vos projets de revêtement de sol.</p>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <p class="lead">Merci de faire confiance à Plancher Expert pour embellir votre intérieur!</p>
+        </div>
+    </div>
+
+   
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>

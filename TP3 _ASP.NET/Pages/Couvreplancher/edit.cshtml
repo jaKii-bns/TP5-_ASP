@@ -1,0 +1,51 @@
+﻿@page
+@model TP3__ASP.NET.Pages.Couvreplancher.editModel
+@{
+}
+
+<div class="text-center">
+    <h1>Modifier un couvre plancher</h1>
+    <hr />
+</div>
+
+@if (Model.messageErreur.Length > 0)
+{
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <small>@Model.messageErreur</small>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+<form method="post">
+    <input type="hidden" name="id" value="@Model.cvrmodifi.id" />
+
+    <div class="row mb-2">
+        <label class="col-sm-3 col-form-label">Type</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="Type" value="@Model.cvrmodifi.Type" />
+        </div>
+    </div>
+
+    <div class="row mb-2">
+        <label class="col-sm-3 col-form-label">Materiaux</label>
+        <div class="col-sm-6">
+            <input type="number" class="form-control" name="Materiaux" value="@Model.cvrmodifi.Materiaux" />
+        </div>
+    </div>
+
+    <div class="row mb-2">
+        <label class="col-sm-3 col-form-label">Main Oeuvre</label>
+        <div class="col-sm-6">
+            <input type="number" class="form-control" name="mainOeuvre" value="@Model.cvrmodifi.MainOeuvre" />
+        </div>
+    </div>
+
+    <div class="row mb-2">
+        <div class="offset-sm-3 col-sm-3 d-grid">
+            <button type="submit" class="btn btn-primary">Modifier</button>
+        </div>
+        <div class="col-sm-3 d-grid">
+            <a class="btn btn-outline-primary" href="/Couvreplancher/Index" role="button">Annuler</a>
+        </div>
+    </div>
+</form>

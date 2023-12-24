@@ -1,0 +1,43 @@
+﻿@page
+@model TP3__ASP.NET.Pages.Couvreplancher.createModel
+@{
+}
+
+<form method="post">
+    <div class="row mb-2">
+        <label for="id" class="col-sm-3 col-form-label">ID</label>
+        <div class="col-sm-6">
+            <input type="number" class="form-control" name="id" id="id" value="@Model.cvrcreate.id" />
+        </div>
+    </div>
+
+    <div class="row mb-2">
+        <label for="Type" class="col-sm-3 col-form-label">Type</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="Type" id="Type" value="@Model.cvrcreate.Type" />
+        </div>
+    </div>
+
+    <div class="row mb-2">
+        <label for="Materiaux" class="col-sm-3 col-form-label">Materiaux</label>
+        <div class="col-sm-6">
+            <input type="number" class="form-control" name="Materiaux" id="Materiaux" value="@Model.cvrcreate.Materiaux" />
+        </div>
+    </div>
+
+    <div class="row mb-2">
+        <label for="mainOeuvre" class="col-sm-3 col-form-label">Main Oeuvre</label>
+        <div class="col-sm-6">
+            <input type="number" class="form-control" name="mainOeuvre" id="mainOeuvre" value="@Model.cvrcreate.MainOeuvre" />
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="offset-sm-3 col-sm-3 d-grid">
+            <button type="submit" class="btn btn-primary">Ajouter</button>
+        </div>
+        <div class="col-sm-3 d-grid">
+            <a class="btn btn-outline-primary" href="/Couvreplancher/Index" role="button">Annuler</a>
+        </div>
+    </div>
+</form>
